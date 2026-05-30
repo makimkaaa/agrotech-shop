@@ -1,0 +1,167 @@
+/* страница */
+body {
+    margin: 0;
+    font-family: Segoe UI, Arial;
+    background: #eef4ea;
+    color: #222;
+}
+
+/* шапка */
+header {
+    background: linear-gradient(135deg,#1b5e20,#43a047);
+    color: white;
+    text-align: center;
+    padding: 45px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+}
+
+    header h1 {
+        margin: 0;
+        font-size: 42px;
+    }
+
+    header p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+/* меню */
+nav {
+    background: #154d18;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 18px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+        nav a:hover {
+            color: #ffd54f;
+        }
+
+/* баннер */
+.hero {
+    background: linear-gradient( rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url(images/tractor2.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+    .hero h2 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+/* секции */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+/* картинки */
+img {
+    width: 360px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* каталог */
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* карточка */
+.card {
+    background: white;
+    width: 270px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: 0.35s;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+/* кнопки */
+button {
+    background: linear-gradient(135deg,#2e7d32,#43a047);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+    button:hover {
+        transform: scale(1.05);
+        background: linear-gradient( 135deg, #43a047, #66bb6a );
+    }
+
+/* контакты */
+#contact {
+    background: #f8fff3;
+}
+
+/* подвал */
+footer {
+    background: #154d18;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* окно заказа */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+}
+
+.modal-content {
+    background: white;
+    width: 420px;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.close {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
