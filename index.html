@@ -1,171 +1,68 @@
 ﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroTech</title>
-
-    <!-- подключение css -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroTech</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- шапка -->
-    <header>
-        <h1>AgroTech</h1>
-        <p>Тракторы и сельхоз удобрения</p>
-    </header>
+<header>
+    <h1>🚜 AgroTech</h1>
+    <p>Тракторы и агро-товары нового поколения</p>
+</header>
 
-    <!-- меню -->
-    <nav>
-        <a href="#about">О магазине</a>
-        <a href="#catalog">Каталог</a>
-        <a href="#delivery">Доставка</a>
-        <a href="#contact">Контакты</a>
-    </nav>
-    <section class="hero">
+<nav>
+    <a href="index.html">Главная</a>
+    <a href="about.html">О нас</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="contact.html">Контакты</a>
+</nav>
 
-        <h2>
-            🚜 AgroTech
-        </h2>
+<section class="hero">
+    <h2>Надёжная техника для сильного хозяйства</h2>
 
-        <p>
-            Надёжные тракторы и удобрения
-            для современного сельского хозяйства
-        </p>
+    <p>
+        Продажа тракторов, удобрений и техники
+        для современного сельского хозяйства
+    </p>
 
-    </section>
-    <!-- описание -->
-    <section id="about">
-        <h2>О компании</h2>
+    <a href="catalog.html">
+        <button>
+            Смотреть каталог
+        </button>
+    </a>
+</section>
 
-        <p>
-            AgroTech — магазин тракторов,
-            сельскохозяйственной техники и удобрений
-            для фермеров и агропредприятий.
-        </p>
+<section>
 
-        <img src="images/tractor1.jpg" alt="Трактор">
-    </section>
+    <h2>Почему выбирают AgroTech?</h2>
 
-    <!-- каталог -->
-    <section id="catalog">
+    <div class="catalog">
 
-        <h2>Каталог товаров</h2>
-
-        <div class="catalog">
-
-            <div class="card">
-                <h3>Трактор МТЗ</h3>
-                <p>3 200 000 ₽</p>
-
-                <button onclick="openOrder('Трактор МТЗ')">
-                    Купить
-                </button>
-            </div>
-
-            <div class="card">
-                <h3>Мини-трактор</h3>
-                <p>1 450 000 ₽</p>
-
-                <button onclick="openOrder('Мини-трактор')">
-                    Купить
-                </button>
-            </div>
-
-            <div class="card">
-                <h3>Азотные удобрения</h3>
-                <p>15 000 ₽</p>
-
-                <button onclick="openOrder('Азотные удобрения')">
-                    Купить
-                </button>
-            </div>
-
-            <div class="card">
-                <h3>Комплексные удобрения</h3>
-                <p>19 000 ₽</p>
-
-                <button onclick="openOrder('Комплексные удобрения')">
-                    Купить
-                </button>
-            </div>
-
+        <div class="card">
+            <h3>🚜 Техника</h3>
+            <p>Современные тракторы и оборудование.</p>
         </div>
 
-    </section>
+        <div class="card">
+            <h3>🌱 Удобрения</h3>
+            <p>Качественные решения для урожая.</p>
+        </div>
 
-    <!-- доставка -->
-    <section id="delivery">
-        <h2>Доставка</h2>
-
-        <p>
-            Доставка техники и удобрений
-            по региону и всей России.
-        </p>
-    </section>
-
-    <!-- контакты -->
-    <section id="contact">
-        <h2>Контакты</h2>
-
-        <p>г. Курск, ул. Аграрная 15</p>
-        <p>+7 (999) 555-22-44</p>
-    </section>
-
-    <!-- окно заказа -->
-    <div id="modal" class="modal">
-
-        <div class="modal-content">
-
-            <span class="close"
-                  onclick="closeModal()">
-                ×
-            </span>
-
-            <h2>Оформление заказа</h2>
-
-            <p id="productName"></p>
-
-            <input type="text"
-                   id="phone"
-                   placeholder="Телефон">
-
-            <input type="text"
-                   id="address"
-                   placeholder="Адрес доставки">
-
-            <input type="text"
-                   id="house"
-                   placeholder="Дом">
-
-            <input type="text"
-                   id="entrance"
-                   placeholder="Подъезд">
-
-            <input type="text"
-                   id="floor"
-                   placeholder="Этаж">
-
-            <input type="text"
-                   id="flat"
-                   placeholder="Квартира">
-
-            <button onclick="sendOrder()">
-                Подтвердить
-            </button>
-
+        <div class="card">
+            <h3>🚚 Доставка</h3>
+            <p>Поставка по всей России.</p>
         </div>
 
     </div>
 
-    <!-- подвал -->
-    <footer>
-        <p>© 2026 AgroTech</p>
-    </footer>
+</section>
 
-    <!-- js -->
-    <script src="script.js"></script>
+<footer>
+    © 2026 AgroTech
+</footer>
 
 </body>
 </html>
