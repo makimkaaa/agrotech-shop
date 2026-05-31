@@ -1,65 +1,99 @@
-let selectedProduct = "";
+// отзывы
 
-// открыть окно
-function openOrder(product) {
+loadReviews();
 
-    selectedProduct = product;
+// добавление
+function addReview() {
 
-    document.getElementById("modal")
-        .style.display = "block";
+    let name =
+        document.getElementById(
+            "reviewName").value;
 
-    document.getElementById("productName")
-        .innerText =
-        "Товар: " + product;
-}
+    let text =
+        document.getElementById(
+            "reviewText").value;
 
-// закрыть
-function closeModal() {
-
-    document.getElementById("modal")
-        .style.display = "none";
-}
-
-// отправка
-function sendOrder() {
-
-    let phone =
-        document.getElementById("phone").value;
-
-    let address =
-        document.getElementById("address").value;
-
-    let house =
-        document.getElementById("house").value;
-
-    let entrance =
-        document.getElementById("entrance").value;
-
-    let floor =
-        document.getElementById("floor").value;
-
-    let flat =
-        document.getElementById("flat").value;
-
-    if (phone == "" || address == "") {
-
+    if (
+        name == "" ||
+        text == ""
+    ) {
         alert(
-            "Заполните телефон и адрес"
+            "Заполните все поля"
         );
-
         return;
     }
 
-    alert(
-        "Заказ оформлен!\n\n" +
-        "Товар: " + selectedProduct +
-        "\nТелефон: " + phone +
-        "\nАдрес: " + address +
-        "\nДом: " + house +
-        "\nПодъезд: " + entrance +
-        "\nЭтаж: " + floor +
-        "\nКвартира: " + flat
+    let reviews =
+        JSON.parse(
+            localStorage.getItem(
+                "reviews"
+            )
+        ) || [];
+
+    reviews.push({
+
+        name: name,
+        text: text
+
+    });
+
+    localStorage.setItem(
+        "reviews",
+        JSON.stringify(reviews)
     );
 
-    closeModal();
+    document.getElementById(
+        "reviewName"
+    ).value = "";
+
+    document.getElementById(
+        "reviewText"
+    ).value = "";
+
+    loadReviews();
+
+}
+
+// загрузка
+function loadReviews() {
+
+    let reviews =
+        JSON.parse(
+            localStorage.getItem(
+                "reviews"
+            )
+        ) || [];
+
+    let block =
+        document.getElementById(
+            "reviewsList"
+        );
+
+    if (!block) {
+        return;
+    }
+
+    block.innerHTML = "";
+
+    reviews.forEach(
+        function (review) {
+
+            block.innerHTML +=
+
+                `
+<div class="review-card">
+
+<h3>
+${review.name}
+</h3>
+
+<p>
+${review.text}
+</p>
+
+</div>
+`;
+
+        });
+
 }
